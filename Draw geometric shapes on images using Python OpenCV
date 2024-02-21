@@ -1,0 +1,43 @@
+import cv2
+import numpy as np
+
+# Create a black image (512x512 pixels) with 3 color channels (RGB) we can create image using numpy as well
+img = np.zeros([512, 512, 3], np.uint8)
+
+#you can read image this as well. 
+img = cv2.imread(img.png, 0)
+
+# Draw a blue line from (0,0) to (255,255) with a thickness of 5 pixels 
+#cv2.line is used to draw lines.
+#three parameter 1. img 2. first starting cord. 3. enging cordinate 4. color in 3 channel 5. thickness
+img = cv2.line(img, (0, 0), (255, 255), (255, 0, 0), 5)
+
+# Draw an arrowed line from (0,255) to (255,255) with a custom color (0,0,44) and thickness of 10 pixels
+#cv2.arrowedline is used to draw arrow on image
+#three parameter 1. img 2. first starting cord. 3. enging cordinate 4. color in 3 channel 5. thickness
+img = cv2.arrowedLine(img, (0, 255), (255, 255), (0, 0, 44), 10)
+
+# Draw a green rectangle with top-left corner at (384,0) and bottom-right corner at (510,128)
+#cv2.rectangle is used to draw rectangle.
+#5 arguments it takes 1. image name 2. first cordinate 3. second cord. 4.color in 3 channel 5. thickness
+img = cv2.rectangle(img, (384, 0), (510, 128), (0, 100, 10), 5)
+
+# Draw a filled red circle centered at (447,63) with a radius of 63 pixels
+#cv2.circle use to draw circle on image
+#arguments it takes 1. img name 2. origin cord. 3. radius 4. 3 channel color intensity 5. thickness if -1 then it will be a solic circle
+img = cv2.circle(img, (447, 63), 63, (25, 250, 10), -1)
+
+# Define the font type
+font = cv2.FONT_HERSHEY_DUPLEX
+
+# Add the text "OpenCV" at position (10,100) with font size 4, color (255,2,100), and thickness 10
+img = cv2.putText(img, 'OpenCV', (10, 100), font, 4, (255, 2, 100), 10, cv2.LINE_AA)
+
+# Display the image in a window named 'frame'
+print(cv2.imshow('frame', img))
+
+# Wait for a key press (0 means indefinite wait)
+cv2.waitKey(0)
+
+# Close all OpenCV windows
+cv2.destroyAllWindows()
