@@ -1,5 +1,5 @@
 import cv2
-
+""" Setting Camera Parameters in OpenCV Python """
 # Initialize video capture from the default camera (index 0)
 cap = cv2.VideoCapture(0)
 
