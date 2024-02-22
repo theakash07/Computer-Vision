@@ -1,0 +1,55 @@
+import cv2
+import datetime
+import time
+
+# Initialize video capture from camera (camera index 1)
+cap = cv2.VideoCapture(1)
+
+# Print the initial frame width and height
+print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
+# Initialize previous frame time for FPS calculation
+prev_frame_time = time.time()
+
+while cap.isOpened():
+    # Read a frame from the camera
+    ret, frame = cap.read()
+
+    if ret:
+        # Set font type for text overlay
+        font = cv2.FONT_HERSHEY_SIMPLEX
+
+        # Display video width and height on the frame
+        text = f'Width: {cap.get(3)}, Height: {cap.get(4)}'
+        frame = cv2.putText(frame, text, (17, 45), font, 1, (0, 24, 89), 2, cv2.LINE_AA)
+
+        # Calculate FPS dynamically
+        new_frame_time = time.time()
+        fps = 1 / (new_frame_time - prev_frame_time)
+        prev_frame_time = new_frame_time
+        fps = int(fps)
+        fps_text = f'FPS: {fps}'
+
+        # Display FPS on the frame
+        frame = cv2.putText(frame, fps_text, (17, 95), font, 1, (0, 255, 2), 2, cv2.LINE_4)
+
+        # Get current date and time
+        datet = str(datetime.datetime.now())
+
+        # Display date and time on the frame
+        frame = cv2.putText(frame, datet, (17, 150), font, 1, (25, 58, 90), 2, cv2.LINE_4)
+
+        # Show the frame in a window named 'vid'
+        cv2.imshow('vid', frame)
+
+        # Exit loop if 'q' key is pressed
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    else:
+        print("Error opening camera")
+        break
+
+# Release video capture and close all windows
+cap.release()
+cv2.destroyAllWindows()
