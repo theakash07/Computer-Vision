@@ -65,6 +65,14 @@ B) Dilation:
 C) Morphological Opening: Opening is a sequence of two operations: erosion followed by dilation.
                           It helps remove small noise or unwanted structures while preserving the overall shape and size of larger objects.
                           Commonly used for noise reduction and object separation.
+
+
+D) Morphological Closing:
+                        Closing is a sequence of two operations: dilation followed by erosion. 
+                        It helps close small gaps or holes in the foreground object while preserving its overall shape.
+                        Commonly used for filling gaps, joining broken parts, and smoothing object boundaries.
+                        The cv2.morphologyEx() function applies the closing operation.
+
                           
 
 
