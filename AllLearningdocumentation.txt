@@ -97,14 +97,17 @@ F) Top-Hat Transformation:
                       Background subtraction.
                       ex: 
                           that = cv2.morphologyEx(mask , cv2.MORPH_TOPHAT, kernel)
-                      
-                      
-                      
 
+==========================================================================================================================================================================================                                                                             
+                                                                  18. Smoothing Images | Blurring Images OpenCV
 
-                      
-                       
-                        
+To acheive smoothing and blurring we can use diverse linear filter, because linear filter easy to acheive and also fast
+There are various linear filters : 1. Homogenous filter
+                                   2. Guassian filter
+                                   3. Median filter
+                                   4. Bilateral filter
+a) Homogenous Filter : 
+
 
 
 
