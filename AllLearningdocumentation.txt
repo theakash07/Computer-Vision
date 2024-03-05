@@ -33,7 +33,7 @@
 
 
 
-
+==========================================================================================================================================================================================
 
                                                                           17. MORPHOLOGICAL TRANSFORMATION :
 1. Morphological transformation are basically performed on binary images.
@@ -106,7 +106,52 @@ There are various linear filters : 1. Homogenous filter
                                    2. Guassian filter
                                    3. Median filter
                                    4. Bilateral filter
-a) Homogenous Filter : 
+
+
+A) 2D convolution filter:
+                   Convolution is like a special magic wand that transforms an image.
+                   We slide a small matrix (the kernel) over the image and do some math at each position.
+                   The output image (dst) gets a new look based on the kernel.
+                   Ex:
+                        #Image filtering using 2D convolution
+                        kernel = np.ones((3, 3), np.float32) / 9
+                        dst = cv2.filter2D(img, -1, kernel)
+                        blur = cv2.blur(src: img, ksize: (5, 5))
+
+     * LPF ( Low pass filter) helps in removing noise and blurring the image.
+     * HPF ( high pass filter) helps in finding edges in images.
+
+a) Guassian Filter :  
+                  This filter  using different weighted kernel in bot x and y direction.
+                  Gaussian blur is like gently smoothing out wrinkles in an image.
+                  It averages the pixel values around each pixel using a special bell-shaped curve (Gaussian distribution).
+                  Ex:
+                     gblur = cv2.GaussianBlur(img, (5, 5), 0)
+                  Result:
+                          Reduces noise.
+                          Softens edges.
+
+                  Application:
+                          Preprocessing for further analysis.
+                          Creating artistic effects.
+
+                  Kernel Size (5x5):
+                          The (5, 5) specifies the size of the filter (kernel).
+                          It’s like choosing how big your smoothing brush should be.
+                          Larger kernel = more smoothing.
+
+                 Standard Deviation (0):
+                          The 0 indicates that the standard deviation along both X and Y axes is automatically calculated from the kernel size.
+                          It’s like adjusting the strength of the smoothing effect.
+
+        
+
+
+
+ 
+                
+
+
 
 
 
