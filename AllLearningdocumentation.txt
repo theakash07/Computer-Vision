@@ -62,6 +62,11 @@ B) Dilation:
                       'kernel = np.ones((5, 5), np.uint8) 
                       'dilation = cv2.dilate(img, kernel, iterations=1)
 
+C) Morphological Opening: Opening is a sequence of two operations: erosion followed by dilation.
+                          It helps remove small noise or unwanted structures while preserving the overall shape and size of larger objects.
+                          Commonly used for noise reduction and object separation.
+                          
+
 
 
 
