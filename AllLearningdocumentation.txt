@@ -44,24 +44,24 @@ KERNEL : A kernel tell you how to change the value of any given pixel by combini
 
 Here are the basic morphological operations and how to implement them using OpenCV:
  A) Erosion:
-            Erosion erodes away the boundaries of the foreground object (usually white).
-            In erosion, it helps shrink the boundaries of white regions (foreground).
-            It slides a kernel (a small matrix) over the image and sets a pixel to 1 only if all the pixels under the kernel are 1.
-            Useful for removing small white noises and detaching connected objects.
-            Example:
-                      img = cv2.imread('j.png', cv2.IMREAD_GRAYSCALE) # READ THE IMGAGE IN GRAY SCALE OR YOU CAN SIMPLY PUT THE FLAG ==0
-                      kernel = np.ones((5, 5), np.uint8) 
-                      erosion = cv2.erode(img, kernel, iterations=1) 
+                          Erosion erodes away the boundaries of the foreground object (usually white).
+                          In erosion, it helps shrink the boundaries of white regions (foreground).
+                          It slides a kernel (a small matrix) over the image and sets a pixel to 1 only if all the pixels under the kernel are 1.
+                          Useful for removing small white noises and detaching connected objects.
+                          Example:
+                                    img = cv2.imread('j.png', cv2.IMREAD_GRAYSCALE) # READ THE IMGAGE IN GRAY SCALE OR YOU CAN SIMPLY PUT THE FLAG ==0
+                                    kernel = np.ones((5, 5), np.uint8) 
+                                    erosion = cv2.erode(img, kernel, iterations=1) 
 
 B) Dilation:
-            Dilation is the opposite of erosion.
-            In dilation, it expands the white regions.
-            A pixel becomes 1 if at least one pixel under the kernel is 1.
-            Increases the white region in the image or the size of the foreground object.
-            Useful for noise removal and joining broken parts of an object.
-            Example: 
-                      'kernel = np.ones((5, 5), np.uint8) 
-                      'dilation = cv2.dilate(img, kernel, iterations=1)
+                          Dilation is the opposite of erosion.
+                          In dilation, it expands the white regions.
+                          A pixel becomes 1 if at least one pixel under the kernel is 1.
+                          Increases the white region in the image or the size of the foreground object.
+                          Useful for noise removal and joining broken parts of an object.
+                          Example: 
+                                    'kernel = np.ones((5, 5), np.uint8) 
+                                    'dilation = cv2.dilate(img, kernel, iterations=1)
 
 
 C) Morphological Opening: Opening is a sequence of two operations: erosion followed by dilation.
