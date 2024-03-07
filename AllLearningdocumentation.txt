@@ -178,7 +178,7 @@ c) Bilateral Filter :
                 Bilateral filtering stands out by maintaining edge details while reducing noise.
 
 ==========================================================================================================================================================================================
-                                                                          20. Image Gradients and Edge Detection
+                                                                          19. Image Gradients and Edge Detection
 Image gradients are mathematical functions used in computer vision and image processing to determine the magnitude and direction of intensity changes in an image. 
 Image gradients play a crucial role in edge detection.
 
@@ -223,6 +223,18 @@ c) sobelcombined = cv2.bitwise_or(Sobix, Sobiy)
                       The bitwise OR (logical OR) operation is applied element-wise to corresponding pixels in two input images.
                       For each pixel, the result is the maximum value of the corresponding pixel values in the input images.
 ==========================================================================================================================================================================================
+                                                                      20. Canny Edge Detection in OpenCV   
+
+      The canny edge detector is an edge detection operator that uses a multi-stage algorithm  to detect   a wide range of edges in images. it was devloped  by john F.canny in 1986.
+
+  The canny edge detection algrorithm is composed of 5 steps :
+1. Noise reduction.
+2. Gradient calculation.
+3. Non-maximum suppresion.
+4. Double thresold.
+5. Edge tracing by Hysteresis.
+
+
 
 
                     
