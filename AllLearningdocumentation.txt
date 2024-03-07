@@ -203,6 +203,27 @@ A) Laplacian Method :
                     This ensures that the pixel values are within the valid range for display (0 to 255).
 
 
+B) Sobel gradients:  Sobel gradients of an input image (img) in both the horizontal and vertical directions. Let’s break down what each line does:
+
+                     Sobix = cv2.Sobel(img, cv2.CV_64F, 1, 0):
+                      Computes the horizontal gradient (along the x-axis) using the Sobel operator.
+                      The result is stored in the variable Sobix.
+                      The cv2.CV_64F data type ensures that the output is a 64-bit floating-point image.  
+
+                     Sobiy = cv2.Sobel(img, cv2.CV_64F, 0, 1):
+                      Computes the vertical gradient (along the y-axis) using the Sobel operator.
+                      The result is stored in the variable Sobiy.
+                      Again, cv2.CV_64F ensures a 64-bit floating-point output.
+
+                    Purpose:
+                      The Sobel gradients help detect edges in the image.
+                      By calculating the intensity changes in both directions, we can identify regions with rapid intensity transitions (edges).
+
+
+                    
+                  
+       
+
 
  
                 
