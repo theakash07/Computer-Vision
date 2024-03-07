@@ -144,8 +144,16 @@ a) Guassian Filter :
                           The 0 indicates that the standard deviation along both X and Y axes is automatically calculated from the kernel size.
                           It’s like adjusting the strength of the smoothing effect.
 
-        
 
+b) Median Blur : 
+                Median blurring is a technique used to reduce noise in an image.
+                Instead of using a weighted average like Gaussian blurring, median blurring replaces each pixel’s value with the median value of its neighboring pixels.
+                It is particularly effective in removing salt-and-pepper noise (random black and white pixels) from an image.
+        
+                Ex: 
+                   cv2.medianBlur(img, 5):
+                    img: The input image.
+                    5: The size of the kernel (filter) used for median blurring. In this case, it’s a 5x5 kernel.
 
 
  
