@@ -155,6 +155,29 @@ b) Median Blur :
                     img: The input image.
                     5: The size of the kernel (filter) used for median blurring. In this case, it’s a 5x5 kernel.
 
+c) Bilateral Filter : 
+                 Bilateral filtering is a non-linear, edge-preserving smoothing technique used to reduce noise in an image while preserving edges.
+                 It replaces the intensity of each pixel with a weighted average of intensity values from nearby pixels, considering both spatial distance and intensity similarity
+
+                 Function Parameters:
+                    cv2.bilateralFilter(img, 9, 75, 75):
+                          img: The input image.
+                          9: The diameter of each pixel neighborhood (kernel size). A larger value includes more neighboring pixels in the computation.
+                          75: The value of sigmaColor in the color space. It controls how much color similarity affects the filtering. Higher values allow colors farther apart to be 
+                              mixed.
+                          75: The value of sigmaSpace in the coordinate space. It determines how far pixels can mix together based on spatial distance. Larger values result in more 
+                              extensive mixing within the neighborhood.
+
+                 Comparison with Other Filters:
+                
+                Bilateral filtering retains edges better than average, median, and Gaussian filters.
+                Below are outputs from different filters for comparison:
+                Average filter: cv2.blur(img, (5, 5))
+                Median filter: cv2.medianBlur(img, 5)
+                Gaussian filter: cv2.GaussianBlur(img, (5, 5), 0)
+                Bilateral filtering stands out by maintaining edge details while reducing noise.
+
+==========================================================================================================================================================================================
 
  
                 
