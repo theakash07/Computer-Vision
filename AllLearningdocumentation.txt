@@ -219,6 +219,11 @@ B) Sobel gradients:  Sobel gradients of an input image (img) in both the horizon
                       The Sobel gradients help detect edges in the image.
                       By calculating the intensity changes in both directions, we can identify regions with rapid intensity transitions (edges).
 
+c) sobelcombined = cv2.bitwise_or(Sobix, Sobiy)
+                      The bitwise OR (logical OR) operation is applied element-wise to corresponding pixels in two input images.
+                      For each pixel, the result is the maximum value of the corresponding pixel values in the input images.
+==========================================================================================================================================================================================
+
 
                     
                   
