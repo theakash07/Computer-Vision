@@ -236,7 +236,17 @@ c) sobelcombined = cv2.bitwise_or(Sobix, Sobiy)
 
   a) Canny : The Canny edge detection algorithm to find the edges in an image.
              The output of this code is a binary image with thin edges, where the pixels that belong to the edges are white and the rest are black.
-            Ex: canny = cv2.Canny(img, 170,  250)
+             Ex: canny = cv2.Canny(img, 170,  250)
+
+==========================================================================================================================================================================================
+                                                                     21.  Image Pyramids with Python and OpenCV
+
+An image pyramid is a way of representing an image at different resolutions, which can be useful for image processing tasks such as feature detection, image blending, and edge detection.
+      There are two types of image pyramid.
+      1. Gaussian Pyramid
+      2. Laplacian pyramid
+
+Gaussian Pyramid :
 
 
 
