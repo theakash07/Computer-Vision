@@ -252,7 +252,11 @@ Gaussian Pyramid : A Gaussian pyramid is a technique in image processing that br
                             Smoothing is done by applying a Gaussian filter to the image to remove high-frequency components that could cause aliasing.
                             Subsampling is done by reducing the image size by half along each dimension, usually by taking every alternate pixel.
 
-                            
+                    There are few function of Guassian Pyramid.
+                     1. lr = cv2.pyrDown(img)
+                                the code use to downsample an image by a factor of two. 
+                                It takes an input image img and returns a smaller image lr that has half the width and height of the original image.
+                                This reduces the image size to one-fourth of the original area while preserving the main features of the image.
 
 
 
