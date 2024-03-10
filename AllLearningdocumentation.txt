@@ -257,7 +257,11 @@ Gaussian Pyramid : A Gaussian pyramid is a technique in image processing that br
                                 the code use to downsample an image by a factor of two. 
                                 It takes an input image img and returns a smaller image lr that has half the width and height of the original image.
                                 This reduces the image size to one-fourth of the original area while preserving the main features of the image.
+                    2. cv2.pyrUp(img) 
+                               The pyrUp function increases the size of the image to twice its original size in each dimension by inserting zero rows and columns and then convolving the 
+                               image with a Gaussian kernel.
 
+                               
 
 
 
