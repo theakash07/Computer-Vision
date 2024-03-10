@@ -234,6 +234,10 @@ c) sobelcombined = cv2.bitwise_or(Sobix, Sobiy)
 4. Double thresold.
 5. Edge tracing by Hysteresis.
 
+  a) Canny : The Canny edge detection algorithm to find the edges in an image.
+             The output of this code is a binary image with thin edges, where the pixels that belong to the edges are white and the rest are black.
+            Ex: canny = cv2.Canny(img, 170,  250)
+
 
 
 
