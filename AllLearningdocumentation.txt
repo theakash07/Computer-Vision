@@ -246,7 +246,13 @@ An image pyramid is a way of representing an image at different resolutions, whi
       1. Gaussian Pyramid
       2. Laplacian pyramid
 
-Gaussian Pyramid :
+Gaussian Pyramid : A Gaussian pyramid is a technique in image processing that breaks down an image into successively smaller groups of pixels to blur it. It is named after German 
+                   mathematician Johann Carl Friederich Gauss.
+                   A Gaussian pyramid consists of two steps: smoothing and subsampling.
+                            Smoothing is done by applying a Gaussian filter to the image to remove high-frequency components that could cause aliasing.
+                            Subsampling is done by reducing the image size by half along each dimension, usually by taking every alternate pixel.
+
+                            
 
 
 
