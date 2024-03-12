@@ -261,6 +261,9 @@ Gaussian Pyramid : A Gaussian pyramid is a technique in image processing that br
                                The pyrUp function increases the size of the image to twice its original size in each dimension by inserting zero rows and columns and then convolving the 
                                image with a Gaussian kernel.
 
+Laplacian Pyramid : A level in laplacian pyramid is formed by the difference between that level in Guassian Pyramid and expanded version of its upper level in guassian pyramid.
+                    
+
                                
 
 
