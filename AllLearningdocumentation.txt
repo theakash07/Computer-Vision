@@ -271,9 +271,17 @@ Laplacian Pyramid : A level in laplacian pyramid is formed by the difference bet
                               lp.append(laplacian)
                               cv2.imshow( str[i] , laplacian)
 
-                    
+==========================================================================================================================================================================================
+                                                                  22.  Image Blending using Pyramids in OpenCV
 
-                               
+we can blend image using blendimage = np.hstack((resized_img[:, : 256], resized_img1[:, 256:])).
+
+
+
+
+
+
+                                                              
 
 
 
