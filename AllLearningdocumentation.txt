@@ -262,6 +262,7 @@ Gaussian Pyramid : A Gaussian pyramid is a technique in image processing that br
                                image with a Gaussian kernel.
 
 Laplacian Pyramid : A level in laplacian pyramid is formed by the difference between that level in Guassian Pyramid and expanded version of its upper level in guassian pyramid.
+                    Also helps in reconstruction of images.
                     
 
                                
