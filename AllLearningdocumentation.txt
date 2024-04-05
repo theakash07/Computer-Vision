@@ -280,7 +280,11 @@ we can blend image using blendimage = np.hstack((resized_img[:, : 256], resized_
 
 
 
+==========================================================================================================================================================================================
+                                                                23. Find and Draw Contours with OpenCV in Python
 
+what is contours = It's the curve joining all the continous points along the boundary which are having the same color and intensity. 
+                   Contours is useful tool for shape analysis, image detection and recognintion.
                                                               
 
 
